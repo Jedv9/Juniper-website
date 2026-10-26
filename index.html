@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juniper Hair | Hair Studio</title>
+  <meta name="description" content="Juniper Hair: a private, one-on-one hair studio for dimensional color, modern cuts, and smoothing treatments. Book your appointment online." />
+  <meta property="og:title" content="Juniper Hair" />
+  <meta property="og:description" content="Thoughtful color, modern cuts, and hair that feels like you. Book online." />
+  <meta name="theme-color" content="#24382c" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Juniper Hair home">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#sprig"/></svg>
+        <span data-site="name">Juniper Hair</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <nav id="menu" class="nav__menu">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery" data-needs="gallery">Work</a>
+        <a href="#visit">Visit</a>
+        <a href="#book" class="btn btn--small">Book now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Private hair studio</p>
+          <h1>Hair that feels<br /><em>like you.</em></h1>
+          <p class="lead" data-site="tagline"></p>
+          <div class="hero__cta">
+            <a href="#book" class="btn">Book an appointment</a>
+            <a href="#services" class="btn btn--ghost">View services</a>
+          </div>
+        </div>
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="arch">
+            <svg viewBox="0 0 200 260" class="arch__sprig"><use href="#sprig-large"/></svg>
+          </div>
+          <div class="hero__badge">
+            <strong>1:1</strong>
+            <span>Every appointment,<br />one stylist, no rush</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO STRIP -->
+    <section class="strip">
+      <div class="wrap strip__inner">
+        <div><span class="strip__num">01</span><p>Dimensional color</p></div>
+        <div><span class="strip__num">02</span><p>Precision cuts</p></div>
+        <div><span class="strip__num">03</span><p>Smoothing treatments</p></div>
+        <div><span class="strip__num">04</span><p>Bridal &amp; events</p></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about__photo reveal" id="aboutPhoto">
+          <svg viewBox="0 0 200 260" aria-hidden="true"><use href="#sprig-large"/></svg>
+        </div>
+        <div class="about__copy reveal">
+          <p class="eyebrow" id="aboutHeading"></p>
+          <h2 id="aboutName"></h2>
+          <p class="about__title" id="aboutTitle"></p>
+          <p class="lead" data-site="intro"></p>
+          <div id="aboutParas"></div>
+          <a href="#book" class="link-arrow">Book with me <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section--tint" id="services">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Services &amp; pricing</p>
+          <h2>Menu</h2>
+          <p class="muted">Prices vary with hair length, density, and time. Your exact quote is confirmed at your consultation.</p>
+        </div>
+        <div class="tabs reveal" role="tablist" id="serviceTabs"></div>
+        <div id="servicePanels"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery" data-needs="gallery">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Recent work</p>
+          <h2>From the chair</h2>
+        </div>
+        <div class="gallery" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--dark" id="reviews">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow eyebrow--light">Kind words</p>
+          <h2>What clients say</h2>
+        </div>
+        <div class="reviews" id="reviewList"></div>
+      </div>
+    </section>
+
+    <!-- BOOK -->
+    <section class="section" id="book">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Appointments</p>
+          <h2>Book your visit</h2>
+          <p class="muted">Pick a service and a time that works for you. You'll get a confirmation by email right away.</p>
+        </div>
+        <div class="booking reveal" id="bookingWidget"></div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="section section--tint" id="visit">
+      <div class="wrap visit">
+        <div class="visit__col reveal">
+          <p class="eyebrow">Visit</p>
+          <h2>Find the studio</h2>
+          <address id="address"></address>
+          <a class="link-arrow" id="mapsLink" target="_blank" rel="noopener">Get directions <span aria-hidden="true">→</span></a>
+          <div class="contact-lines">
+            <a id="phoneLink"></a>
+            <a id="emailLink"></a>
+          </div>
+          <div class="socials" id="socials"></div>
+        </div>
+        <div class="visit__col reveal">
+          <p class="eyebrow">Hours</p>
+          <table class="hours" id="hoursTable"></table>
+        </div>
+        <div class="visit__col reveal">
+          <p class="eyebrow">Good to know</p>
+          <dl class="policies" id="policyList"></dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#top" class="brand brand--light">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#sprig"/></svg>
+        <span data-site="name">Juniper Hair</span>
+      </a>
+      <p>© <span id="year"></span> <span data-site="name"></span>. All rights reserved.</p>
+      <a href="#book" class="btn btn--light btn--small">Book now</a>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile book button -->
+  <a href="#book" class="mobile-book">Book an appointment</a>
+
+  <!-- SVG symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sprig" viewBox="0 0 40 40">
+      <path d="M20 37 V6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M20 12 L13 7"/><path d="M20 12 L27 7"/>
+        <path d="M20 19 L11 13"/><path d="M20 19 L29 13"/>
+        <path d="M20 26 L10 20"/><path d="M20 26 L30 20"/>
+      </g>
+      <circle cx="13" cy="29" r="2.4" fill="currentColor"/>
+      <circle cx="27" cy="30" r="2" fill="currentColor"/>
+    </symbol>
+    <symbol id="sprig-large" viewBox="0 0 200 260">
+      <path d="M100 250 C100 180 98 110 102 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M101 40 C90 34 80 26 74 16"/><path d="M101 40 C112 33 122 25 128 14"/>
+        <path d="M101 62 C86 55 72 46 62 32"/><path d="M101 62 C116 54 130 44 140 30"/>
+        <path d="M100 86 C82 79 64 68 52 52"/><path d="M100 86 C118 78 136 66 148 50"/>
+        <path d="M100 112 C80 104 60 92 44 74"/><path d="M100 112 C120 103 140 90 156 72"/>
+        <path d="M100 140 C80 132 58 120 42 102"/><path d="M100 140 C120 131 142 118 158 100"/>
+        <path d="M100 168 C82 161 62 150 48 134"/><path d="M100 168 C118 160 138 148 152 132"/>
+        <path d="M100 196 C86 190 72 182 62 170"/><path d="M100 196 C114 189 128 180 138 168"/>
+      </g>
+      <g fill="currentColor">
+        <circle cx="70" cy="122" r="6"/><circle cx="58" cy="132" r="5"/><circle cx="74" cy="138" r="4.5"/>
+        <circle cx="134" cy="160" r="6"/><circle cx="146" cy="150" r="4.5"/><circle cx="128" cy="174" r="5"/>
+        <circle cx="122" cy="58" r="4"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
