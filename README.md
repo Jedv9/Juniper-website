@@ -1,30 +1,45 @@
-# Juniper Hair website
+# Juniper website
 
-A fast, mobile-friendly static site with built-in online booking (Calendly or Google Calendar). No build step: just HTML, CSS and JavaScript.
+The website for Juniper, Faith's hair studio in Waupaca, WI.
 
-## Edit your info
+## How to edit the site yourself (no coding)
 
-Everything (name, services, prices, hours, address, reviews, policies, photos, booking link) lives in **`config.js`**. Change the text there and the site updates.
+All the words, prices, hours, photos and the booking link are in **one file: `config.js`**.
 
-## Turn on booking
+### Editing from a phone or computer (on GitHub)
+1. Go to the repository on github.com and tap **`config.js`**.
+2. Tap the **pencil icon** ("Edit this file").
+3. Change the text between the quotes, for example a price: `"$45"` → `"$50"`.
+4. Tap **Commit changes**. If the site is hosted on Netlify or Cloudflare Pages (see below), it updates by itself in about a minute.
 
-**Calendly**
-1. In Calendly, copy your scheduling link (e.g. `https://calendly.com/juniper-hair`).
-2. In `config.js` set `provider: "calendly"` and paste it into `calendlyUrl`.
+Tips:
+- Keep the quotes `" "` and the commas at the end of lines.
+- To add a service, review or photo, copy an existing line and change it.
+- If the page breaks after an edit, a quote or comma is usually missing. Undo it from the file's **History**.
 
-**Google Calendar (appointment schedules)**
-1. In Google Calendar, create an *Appointment schedule*.
-2. Open it → **Share** → **Website embed**, and copy the `src="..."` URL from the iframe code.
-3. In `config.js` set `provider: "google"` and paste it into `googleUrl`.
+### Changing photos
+1. Open the **`images`** folder → **Add file** → **Upload files**.
+2. In `config.js`, point to the new file, e.g. `"images/new-photo.jpg"`.
+Use photos under ~1 MB if you can, so the site stays fast.
 
-Until a link is added, the booking section shows "Text to book" and "Email us" buttons instead.
+### Changing colors or fonts
+At the top of `styles.css`, the colors are listed with plain names (`--butter`, `--sage`, `--moss`...). Change a color code there and it updates everywhere.
 
-## Add photos
+## Booking
 
-Put images in an `images/` folder, then:
-- stylist photo: `about.photo: "images/stylist.jpg"`
-- portfolio: add entries to `gallery` (the "Work" section only appears once photos are listed).
+In `config.js`, under `booking`, set `provider` to one of:
 
-## Preview & publish
+| provider | What visitors see | What to paste |
+|---|---|---|
+| `"glossgenius"` (current) | A "Book online" button | Your GlossGenius link |
+| `"calendly"` | The Calendly calendar, built into the page | Your Calendly link, e.g. `https://calendly.com/juniper-hair` |
+| `"google"` | The Google booking calendar, built into the page | Google Calendar → *Appointment schedule* → **Share** → **Website embed** → copy the link inside `src="..."` |
 
-Open `index.html` in a browser to preview. To publish, drop the folder on Netlify, Cloudflare Pages, or GitHub Pages and point `juniper-hair.com` at it.
+## Putting it online (free)
+
+1. Make a free account at **netlify.com** (or Cloudflare Pages) and choose **Import from GitHub** → pick this repository. No build settings needed.
+2. In Netlify, go to **Domain settings** and add `juniper-hair.com`. Follow its steps to point the domain there (done where the domain is registered, which may be Wix).
+3. After that, every change saved in GitHub goes live automatically.
+
+## Preview
+Open `index.html` in any browser.
